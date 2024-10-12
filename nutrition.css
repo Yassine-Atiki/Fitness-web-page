@@ -1,0 +1,50 @@
+body{
+    background-color: #000;
+}
+.cont>h3{
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #fff;
+}
+.table{
+    margin-top: 30px;
+    padding: 100px;
+}
+.table>legend{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.table>table td {
+    border: solid 1px ;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+}
+.table>table th{
+    border: solid 1px ;
+    background-color: #f9ac54 ;
+}
+#id{
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 570px;
+}
+#id:hover{
+    color: #f9ac54;
+    text-decoration: underline;
+    opacity: 0.5;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+}
+.footer{
+    text-align: center;
+    margin-top: 50px;
+    text-transform: capitalize;
+}

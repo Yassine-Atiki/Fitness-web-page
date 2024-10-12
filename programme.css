@@ -1,0 +1,92 @@
+body{
+    background-color: #000;
+}
+.class1{
+    margin: 20px;
+}
+.class1 h2{
+    font-family: sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.class2{
+    margin: 30px;
+    text-align: center;
+    color: #fff;
+}
+.class2 p{
+    font-size: large;
+    font-family: serif;
+    color: #fff;
+}
+.class2 h2{
+    color: tomato;
+}
+.exercices{
+    border-bottom: #fff solid 5px;
+    margin: 50px;
+    padding-bottom: 30px;
+}
+.exercices>b{
+    color: #f9ac54;
+    font-family: sans-serif;
+}
+.exercices>ul li{
+    font-family: sans-serif;
+    color: #fff;
+}
+.class3{
+    margin: 30px;
+    text-align: center;
+    color: #fff;
+}
+.class3 p{
+    font-size: large;
+    font-family: serif;
+    color: #fff;
+}
+.class3 h2{
+    color: tomato;
+}
+.masse{
+    border-bottom: #fff solid 5px;
+    margin: 50px;
+    padding-bottom: 30px;
+}
+.masse>b{
+    color: #f9ac54;
+    font-family: sans-serif;
+}
+.masse>ul li{
+    font-family: sans-serif;
+    color: #fff;
+}
+.home>a{
+    margin-left: 570px;
+    text-decoration: none;
+    font-size: larger;
+    color: #f9ac54;
+    text-transform: capitalize;
+}
+.home>a:hover{
+    text-decoration: underline;
+    color: #f9ac54;
+    opacity: 0.5;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+.footer{
+    text-align: center;
+    color: #fff;
+}
+.class2>img{
+    float: right;
+    margin-right: 100px;
+    margin-top: 140px;
+}
+.class3>img{
+    float: right;
+    margin-right: 100px;
+    margin-top: 80px;
+}
