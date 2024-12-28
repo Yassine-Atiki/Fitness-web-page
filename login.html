@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="registre" id="registre">
-        <form id="form">
+        <form action="" id="form">
         <h1>Se conecter</h1>
         <fieldset>
             <label for="email"><b>Email:</b></label
@@ -17,12 +17,13 @@
             name="email" id="email"
             type="email"
             placeholder="Entrer l'Email"
-            required
             />
+            <div class="error"></div>
             <p></p>
             <label for="passwd"><b>Password:</b></label
             ><br />
-            <input type="password" placeholder="Entrer le mot de passe: " name="passwd" id="passwd" required />
+            <input type="password" placeholder="Entrer le mot de passe: " name="passwd" id="passwd"  />
+            <div class="error"></div>
             <p></p>
             <button type="submit">se connecter</button>
         </fieldset>
@@ -34,5 +35,6 @@
     <div class="footer">
         <footer>© Copyright 2024 - Tous droits réservés à Fitness 360.</footer>
     </div>
+    <script src="validation.js"></script>
 </body>
 </html>
