@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 360 - SignUp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="registre" id="registre">
+        <form id="form">
+        <h1>Inscription:</h1>
+        <fieldset>
+            <label for="name"><b>Nom:</b></label
+            ><br />
+            <input type="text" name="name" id="name" placeholder="Entrer votre nom" required />
+            <p></p>
+            <label for="email"><b>Email:</b></label
+            ><br />
+            <input
+            name="email" id="email"
+            type="email"
+            placeholder="Entrer l'Email"
+            required
+            />
+            <p></p>
+            <label for="passwd"><b>Password:</b></label
+            ><br />
+            <input type="password" placeholder="Entrer le mot de passe: " name="passwd" id="passwd" required />
+            <p></p>
+            <label for="repeat-passwd"><b>Confirm password:</b></label
+            ><br />
+            <input type="password" name="repeat-passwd" id="repeat-passwd" placeholder="Repeter le mot de passe: " required />
+            <p></p>
+            <button type="submit">S'inscrire</button>
+        </fieldset>
+        </form>
+        <span class="already">
+            <p>Vous avez deja un compte? <a href="login.html">se connecter</a></p>
+        </span>
+    </div>
+    <div class="footer">
+        <footer>© Copyright 2024 - Tous droits réservés à Fitness 360.</footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
