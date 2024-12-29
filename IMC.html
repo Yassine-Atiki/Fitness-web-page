@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 360 - Calcul IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registre" id="registre">
+        <form id="imc-form">
+            <h1>Calcul de l'IMC</h1>
+            <fieldset>
+                <label for="height"><b>Taille (en cm):</b></label><br />
+                <input type="number" name="height" id="height" placeholder="Entrer votre taille" required /><br />
+                <div class="error"></div>
+                <p></p>
+
+                <label for="weight"><b>Poids (en kg):</b></label><br />
+                <input type="number" name="weight" id="weight" placeholder="Entrer votre poids" required /><br />
+                <div class="error"></div>
+                <p></p>
+
+                <button type="button" id="calculate-imc">Calculer</button>
+                <p id="result"></p>
+            </fieldset>
+        </form>
+    </div>
+    <div class="footer">
+        <footer>© Copyright 2024 - Tous droits réservés à Fitness 360.</footer>
+    </div>
+    <script>
+        document.querySelector('#calculate-imc').addEventListener('click', () => {
+            const height = parseFloat(document.querySelector('#height').value) / 100; // Convert to meters
+            const weight = parseFloat(document.querySelector('#weight').value);
+            const resultElement = document.querySelector('#result');
+            const heightError = document.querySelector('#height').nextElementSibling;
+            const weightError = document.querySelector('#weight').nextElementSibling;
+
+            heightError.textContent = '';
+            weightError.textContent = '';
+            resultElement.textContent = '';
+
+            if (isNaN(height) || height <= 0) {
+                heightError.textContent = 'Veuillez entrer une taille valide.';
+                heightError.style.color = 'red';
+                return;
+            }
+
+            if (isNaN(weight) || weight <= 0) {
+                weightError.textContent = 'Veuillez entrer un poids valide.';
+                weightError.style.color = 'red';
+                return;
+            }
+
+            const imc = (weight / (height * height)).toFixed(2);
+
+            let message;
+            if (imc < 18.5) {
+                message = `IMC: ${imc} - Insuffisance pondérale.`;
+            } else if (imc >= 18.5 && imc < 24.9) {
+                message = `IMC: ${imc} - Poids normal.`;
+            } else if (imc >= 25 && imc < 29.9) {
+                message = `IMC: ${imc} - Surpoids.`;
+            } else {
+                message = `IMC: ${imc} - Obésité.`;
+            }
+
+            resultElement.textContent = message;
+        });
+    </script>
+</body>
+</html>
