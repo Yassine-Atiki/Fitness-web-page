@@ -13,12 +13,12 @@
             <fieldset>
                 <label for="height"><b>Taille (en cm):</b></label><br />
                 <input type="number" name="height" id="height" placeholder="Entrer votre taille" required /><br />
-                <div class="error"></div>
+                <div class="errorH"></div>
                 <p></p>
 
                 <label for="weight"><b>Poids (en kg):</b></label><br />
                 <input type="number" name="weight" id="weight" placeholder="Entrer votre poids" required /><br />
-                <div class="error"></div>
+                <div class="errorW"></div>
                 <p></p>
 
                 <button type="button" id="calculate-imc">Calculer</button>
@@ -31,26 +31,24 @@
     </div>
     <script>
         document.querySelector('#calculate-imc').addEventListener('click', () => {
-            const height = parseFloat(document.querySelector('#height').value) / 100; // Convert to meters
+            const height = parseFloat(document.querySelector('#height').value) / 100;
             const weight = parseFloat(document.querySelector('#weight').value);
             const resultElement = document.querySelector('#result');
-            const heightError = document.querySelector('#height').nextElementSibling;
-            const weightError = document.querySelector('#weight').nextElementSibling;
+            const heightError = document.querySelector('.errorH');
+            const weightError = document.querySelector('.errorW');
 
-            heightError.textContent = '';
-            weightError.textContent = '';
-            resultElement.textContent = '';
+            heightError.innerHTML = '';
+            weightError.innerHTML = '';
+            resultElement.innerHTML = '';
 
             if (isNaN(height) || height <= 0) {
-                heightError.textContent = 'Veuillez entrer une taille valide.';
+                heightError.innerHTML = 'Veuillez entrer une taille valide.';
                 heightError.style.color = 'red';
-                return;
             }
 
             if (isNaN(weight) || weight <= 0) {
-                weightError.textContent = 'Veuillez entrer un poids valide.';
+                weightError.innerHTML = 'Veuillez entrer un poids valide.';
                 weightError.style.color = 'red';
-                return;
             }
 
             const imc = (weight / (height * height)).toFixed(2);
@@ -66,7 +64,9 @@
                 message = `IMC: ${imc} - Obésité.`;
             }
 
-            resultElement.textContent = message;
+            if (Number(imc)) {
+                resultElement.innerHTML = message;
+            }
         });
     </script>
 </body>
